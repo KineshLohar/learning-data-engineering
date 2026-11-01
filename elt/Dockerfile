@@ -1,6 +1,6 @@
-FROM python:3.8-slim
+FROM python:3.12-slim
 
-RUN apt-get update && apt-get install =y postgresql-client
+RUN apt-get update && apt-get install -y postgresql-client && rm -rf /var/lib/apt/lists/*
 
 COPY elt_script.py .
 
